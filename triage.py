@@ -4,6 +4,7 @@ from pathlib import Path
 
 INPUT_FILE = "alerts.csv"
 OUTPUT_DIR = Path("output")
+ESCALATED_CSV = OUTPUT_DIR / "escalated_alerts.csv"
 OUTPUT_CSV = OUTPUT_DIR / "triaged_alerts.csv"
 OUTPUT_MD = OUTPUT_DIR / "incident_report.md"
 
@@ -157,6 +158,10 @@ def main():
     df["triage_notes"] = df.apply(add_notes, axis=1)
 
     df.to_csv(OUTPUT_CSV, index=False)
+    
+    escalated_df = df[df["recommended_action"].str.contains("Escalate", case=False, na=False)]
+    escalated_df.to_csv(ESCALATED_CSV, index=False)
+    
     write_markdown_report(df)
 
     print("Triage complete.")
