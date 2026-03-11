@@ -1,0 +1,9 @@
+id,timestamp,user,source_ip,alert_type,description,failed_logins,attachment,external_sender,kev_flag,cvss,status
+1,2026-03-11 09:15:00,j.smith,185.23.44.10,phishing,Suspicious email with urgent payment request,0,yes,yes,no,0,new
+2,2026-03-11 09:18:00,a.rahman,10.0.0.12,failed_login,Multiple failed login attempts detected,8,no,no,no,0,new
+3,2026-03-11 09:22:00,m.khan,192.168.1.21,malware,Endpoint flagged possible trojan activity,0,no,no,yes,8.7,new
+4,2026-03-11 09:30:00,s.patel,172.16.4.2,suspicious_access,Login from unusual location and time,3,no,no,no,6.2,new
+5,2026-03-11 09:41:00,r.ali,10.0.0.44,password_reset,User unable to access account and requested reset,0,no,no,no,0,new
+6,2026-03-11 09:50:00,h.uddin,203.0.113.8,phishing,Email contains suspicious link and attachment,0,yes,yes,no,0,new
+7,2026-03-11 10:03:00,t.hussain,10.0.0.50,vulnerability,Host matched known exploited vulnerability,0,no,no,yes,9.1,new
+8,2026-03-11 10:14:00,l.begum,10.0.0.19,failed_login,Two failed logins after password typo,2,no,no,no,0,new
